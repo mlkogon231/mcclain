@@ -6,6 +6,29 @@ Route::get('/', function () {
 
 });
 
+// database stuff here
+
+Route::get('customer', function(){
+  $customer = App\Customer::find(1);
+  echo  '<pre>';
+  print_r($customer);
+
+});
+
+Route::get('customer/{id}', function($id) {
+  $customer = App\Customer::find($id);
+  echo '<center>';
+  echo '<table border = 1><tr><td>FirstName</td><td>Lastname</td><td>Email</td></tr>';
+  echo '<tr><td>' . $customer->FirstName . '</td><td>' . $customer->LastName . '</td><td>' . $customer->Email . '</td></tr></table>';
+});
+
+Route::get('customer_name', function() {
+  $customer = App\Customer::where('LastName', '=', 'Kogon')->first();
+ echo '<center>';
+  echo '<table border = 1><tr><td>FirstName</td><td>Lastname</td><td>Email</td></tr>'; 
+  echo '<tr><td>' . $customer->FirstName . '</td><td>' . $customer->LastName . '</td><td>' . $customer->Email . '</td></tr></table>';
+});
+
 Route::get('hello/{name}', function ($name) {
   //  return view('welcome');
   echo 'Hello ' . $name . ', Welcome to my barebones application';
