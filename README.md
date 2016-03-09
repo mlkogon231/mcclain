@@ -118,3 +118,18 @@ App\Customer Object
 )
 
 
+Database Sessions:
+
+These tables have been created as part of configuring the application to use database sessions:
+
+mysql> select * from migrations;
++------------------------------------------------+-------+
+| migration                                      | batch |
++------------------------------------------------+-------+
+| 2014_10_12_000000_create_users_table           |     1 |
+| 2014_10_12_100000_create_password_resets_table |     1 |
+| 2016_03_09_021756_create_sessions_table        |     1 |
++------------------------------------------------+-------+
+3 rows in set (0.00 sec)
+
+
