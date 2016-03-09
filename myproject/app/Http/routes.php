@@ -6,6 +6,13 @@ Route::get('/', function () {
 
 });
 
+// for heroku 
+
+$app->get('/cowsay', function() use($app) {
+  $app['monolog']->addDebug('cowsay');
+  return "<pre>".\Cowsayphp\Cow::say("Cool beans")."</pre>";
+});
+
 // database stuff here
 
 Route::get('customer', function(){
