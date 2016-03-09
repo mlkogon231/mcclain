@@ -134,3 +134,5 @@ mysql> select * from migrations;
 
 
 authentication runs under localhost:8000 
+
+added the 2 usernames
