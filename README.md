@@ -133,3 +133,4 @@ mysql> select * from migrations;
 3 rows in set (0.00 sec)
 
 
+authentication runs under localhost:8000 
